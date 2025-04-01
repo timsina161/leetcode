@@ -1,9 +1,14 @@
+/* Given an array of int and a integer target,find the index such that the sum of those index is the target number 
+
+
+
+*/
 #include <iostream>
 #include <vector>
 void num_(std::vector<int>&input_arr,int size)
 {
     int i,j,target;
-    bool falg = false;
+    bool flag = false;
     std::cout<<"Enter target: ";
     std::cin>>target;
     for(i=0;i<size;i++)
@@ -12,14 +17,14 @@ void num_(std::vector<int>&input_arr,int size)
         {
             if(input_arr[i]+input_arr[j] == target)
             {
-                std::cout<<i<<j;
-                falg = true;
+                std::cout<<i<<" , "<<j;
+                flag = true;
                
             }         
         }
-        if(falg) break;
+        if(flag) break;
     }
-    if(!falg)
+    if(!flag)
     {
         std::cout<<"No matching indices found\n";
     }
@@ -42,3 +47,16 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+
+/* Sample Output
+
+Enter the size of your array: 4
+1
+2
+3
+4
+Enter the target value: 4
+
+0 , 2
+
+*/
